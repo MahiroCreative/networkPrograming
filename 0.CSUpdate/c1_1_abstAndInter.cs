@@ -14,6 +14,10 @@ namespace co1_ReStudy2
             ene1.Attack();
             ene2.Show();
             ene2.Attack();
+            //ポリモフィズム
+            Enemy ene = new Slime();
+            ene.Show();
+            ene.Attack();
 
             /*インターフェース*/
             Console.WriteLine("【インターフェース：】");
