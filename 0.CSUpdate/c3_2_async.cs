@@ -40,6 +40,7 @@ namespace co3_ExceptionAndAsync
             Console.WriteLine("/*非同期処理の実装*/");
             TimerAsync2(3);
             TimerAsync2(2);
+            TimerAsync(5);//結果待ちをさせるため
             Console.WriteLine("/*非同期処理の実装*/の終了");
 
             /*タスクの終了を待つ*/
@@ -105,7 +106,7 @@ namespace co3_ExceptionAndAsync
                 }
                 catch
                 {
-                    string m = t2.IsCanceled ? "キャンセル" : "エラー";
+                    string m = tas2.IsCanceled ? "キャンセル" : "エラー";
                     Console.WriteLine(m);
                     tas1.Wait();
                     Console.ReadLine();
